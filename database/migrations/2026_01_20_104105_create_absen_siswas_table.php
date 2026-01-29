@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('absen_siswas', function (Blueprint $table) {
             $table->id();
+            $table->string('kode_jadwal')->index();
             $table->foreign('kode_jadwal')->references('kode_jadwal')->on('t_jadwal_mapels')->onDelete('cascade');
             $table->date('tanggal');
             $table->time('jam');

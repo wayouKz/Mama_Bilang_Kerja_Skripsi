@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('guru_mapel_id_detail')->constrained('t_guru_mapel_detail')->onDelete('cascade');
             $table->string('hari');
-            $table->string('kode_jadwal');
+            $table->string('kode_jadwal')->unique()->index();
             $table->time('jam_mulai');
             $table->time('jam_selesai');
             $table->foreignId('kelas_id')->constrained('m_kelas')->onDelete('cascade');
