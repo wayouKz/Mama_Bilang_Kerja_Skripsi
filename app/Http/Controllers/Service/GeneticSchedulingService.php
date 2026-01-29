@@ -92,7 +92,6 @@ class GeneticSchedulingService
         }
     }
     return $kromosom;
-
 }
 
 
